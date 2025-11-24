@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 13:56:49 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/22 13:52:51 by vmahatsa         ###   ########.fr       */
+/*   Created: 2025/11/12 20:39:36 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/17 13:38:29 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks if the character is alphabetic. */
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *s1)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	char	*dest;
+	size_t	i;
+
+	dest = (char *)malloc(ft_strlen(s1) + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

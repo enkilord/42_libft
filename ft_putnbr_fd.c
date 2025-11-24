@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 13:56:49 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/22 13:52:51 by vmahatsa         ###   ########.fr       */
+/*   Created: 2025/11/17 12:33:48 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/24 16:11:41 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks if the character is alphabetic. */
-int	ft_isalpha(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	return ;
+	if (n < 0)
+		ft_putchar_fd('-', fd);
+	if (n >= 10)
+		ft_putchar_fd('-', fd);
 }

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 13:56:49 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/22 13:52:51 by vmahatsa         ###   ########.fr       */
+/*   Created: 2025/11/17 12:33:37 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/24 16:10:40 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks if the character is alphabetic. */
-int	ft_isalpha(int c)
+// ft_putchar_f -- Writes a character on a file descriptor
+void	ft_putchar_fd(char c, int fd)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	write(fd, &c, 1);
 }

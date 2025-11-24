@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/04 13:57:01 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/22 13:52:56 by vmahatsa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_isalnum(int c)
+/* Checks if the character is alphanumeric. */
+int	ft_isalnum(int c)
 {
-    //if (ft_isalpha(c) || ft_isdigit(c))
-    if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))  
-        return (c);
-    return (0);
+	return ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97
+			&& c <= 122));
 }

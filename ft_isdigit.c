@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/04 13:56:59 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/22 13:52:41 by vmahatsa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_isidgit (int c)
+/* Checks if the character is a digit. */
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return (c);
-    return (0);
+	return (c >= '0' && c <= '9');
 }

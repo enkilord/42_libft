@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/04 14:04:06 by vmahatsa          #+#    #+#             */
+/*   Updated: 2025/11/22 13:52:36 by vmahatsa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_isprint(int c)
+/* Checks if the character is printable. */
+int	ft_isprint(int c)
 {
-    //if(c >= space && c <= delete)
-    if(c >= 32 && c <= 126)
-        return (c);
-    return (0);
+	return (c >= 32 && c <= 126);
 }
