@@ -6,34 +6,32 @@
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:54:47 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/22 13:53:10 by vmahatsa         ###   ########.fr       */
+/*   Updated: 2025/11/24 22:22:39 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Converts a string to an integer. */
+// Converts a str to an int
 int	ft_atoi(const char *str)
 {
-	int		sign;
 	long	result;
-	size_t	i;
+	int		sign;
 
-	sign = 1;
 	result = 0;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	sign = 1;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			sign = -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
-		i++;
+		result = result * 10 + (*str - '0');
+		str++;
 	}
-	return ((int)(result * sign));
+	return (result * sign);
 }

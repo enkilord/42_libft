@@ -6,26 +6,22 @@
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 20:39:36 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/17 13:38:29 by vmahatsa         ###   ########.fr       */
+/*   Updated: 2025/11/24 22:49:06 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+// duplicat a string in a new memory area / buffer (dup)
+char	*ft_strdup(const char *s)
 {
-	char	*dest;
-	size_t	i;
+	size_t	len;
+	char	*dup;
 
-	dest = (char *)malloc(ft_strlen(s1) + 1);
-	if (!dest)
+	len = ft_strlen(s);
+	dup = malloc(len + 1);
+	if (!dup)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		dest[i] = s1[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	ft_memcpy(dup, s, len + 1);
+	return (dup);
 }

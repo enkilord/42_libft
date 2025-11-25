@@ -6,26 +6,26 @@
 /*   By: vmahatsa <vmahatsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:17:47 by vmahatsa          #+#    #+#             */
-/*   Updated: 2025/11/22 14:48:23 by vmahatsa         ###   ########.fr       */
+/*   Updated: 2025/11/24 20:50:16 by vmahatsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Copies a string into a buffer with size limit.
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
-	while (src[i] && i + 1 < dstsize)
+	if (n > 0)
 	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (dstsize != 0)
+		while (src[i] && i < n - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
 		dst[i] = '\0';
+	}
 	return (ft_strlen(src));
 }
